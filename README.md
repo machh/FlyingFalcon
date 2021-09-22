@@ -21,7 +21,6 @@ useage:
    
 
 
-
 note:
     
     “remote: Support for password authentication was removed on August 13, 2021.“
@@ -42,6 +41,10 @@ windows
     copy id_rsa.pub to GitHub SSH keys
     
     git push origin master
+   
+after that use ssh to clone the repo!
+
+    git clone git@github.com:machh/FlyingFalcon.git
 
 
 
