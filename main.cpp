@@ -2,6 +2,9 @@
 #include <ctime>
 #include <iostream>
 #include <string>
+#include <memory>
+#include <map>
+#include <mutex>
 #include <asio.hpp>
 
 using asio::ip::tcp;
