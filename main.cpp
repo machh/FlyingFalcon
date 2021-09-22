@@ -6,23 +6,22 @@
 
 using asio::ip::tcp;
 
-std::string make_daytime_string()
-{
-  using namespace std; // For time_t, time and ctime;
-  time_t now = time(0);
-  return ctime(&now);
+//asio::ip::tcp::endpoint server_addr;
+//asio::ip::tcp::acceptor acceptor;
+
+std::string make_daytime_string() {
+    using namespace std; // For time_t, time and ctime;
+    time_t now = time(0);
+    return ctime(&now);
 }
 
 int main() {
-	//asio::ip::tcp::endpoint server_addr;
-	//asio::ip::tcp::acceptor acceptor;
     try
-   {
+    {
         asio::io_context io_context;
        
         tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), 8899));
-        for (;;)
-        {
+        for (;;) {
              tcp::socket socket(io_context);
              acceptor.accept(socket);
              std::string message = make_daytime_string();
@@ -33,9 +32,9 @@ int main() {
         }
      }
      catch (std::exception& e)
-    {
+     {
          std::cerr << e.what() << std::endl;
-    }
+     }
 
-        return 0;
+     return 0;
 }
