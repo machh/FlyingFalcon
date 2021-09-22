@@ -28,6 +28,7 @@ int main() {
              acceptor.accept(socket);
              std::string message = make_daytime_string();
              std::cout << "msg : " << message  <<std::endl;
+             std::cout << "client addr = " << socket.remote_endpoint().address() << std::endl;
 
              asio::error_code ignored_error;
              asio::write(socket, asio::buffer(message), ignored_error);
