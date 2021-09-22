@@ -30,3 +30,16 @@
 *.exe
 *.out
 *.app
+
+Debug/
+debug/
+Release/
+release/
+cmake-build-debug/
+*.mk
+!config.mk
+Makefile
+*.txt
+*.exe
+*.project
+
