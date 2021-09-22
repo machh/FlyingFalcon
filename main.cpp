@@ -28,24 +28,21 @@ int main() {
     
     try {
         asio::io_context io_context;
-       
         tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), 8899));
         
         std::cout << "loccal addr info: \n addr: " << acceptor.local_endpoint().address() << std::endl;
         std::cout << "port: " << acceptor.local_endpoint().port() << std::endl;
         
         while (g_running) {
-             tcp::socket socket(io_context);
-             acceptor.accept(socket);
-             std::string message = make_daytime_string();
-             std::cout << "msg : " << message  <<std::endl;
-            
-             std::cout << "peer client addr = " << socket.remote_endpoint().address() << std::endl;
-            
+            tcp::socket client(io_context);
+            acceptor.accept(client);
+            std::string message = make_daytime_string();
+            std::cout << "msg : " << message  <<std::endl;
+            std::cout << "peer client addr = " << client.remote_endpoint().address() << std::endl;
 
-             asio::error_code ignored_error;
-             asio::write(socket, asio::buffer(message), ignored_error);
-             //socket.read_some(asio::buffer(message));   //sync
+            asio::error_code ignored_error;
+            asio::write(client, asio::buffer(message), ignored_error);
+            //socket.read_some(asio::buffer(message));   //sync
         }
      } catch (std::exception& e) {
          std::cerr << e.what() << std::endl;
