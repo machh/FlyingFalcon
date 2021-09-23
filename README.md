@@ -1,18 +1,15 @@
 # FlyingFalcon
 
-a network framework base on asio
+falcon flying above in the sky freely.  a network framework base on asio
  
-falcon flying above in the sky freely.
-
 
 Asio(non-Boost edition, http://think-async.com/)
 
-and Asio is hosted on GitHub.
-https://github.com/chriskohlhoff/asio/
+and Asio is hosted on GitHub （https://github.com/chriskohlhoff/asio/）
 
 ~~git submodule add https://github.com/chriskohlhoff/asio.git  asio  ~~
 
-useage:
+## useage:
 
     
     git clone https://github.com/machh/FlyingFalcon
@@ -21,18 +18,18 @@ useage:
    
 
 
-note:
+### note:
     
     “remote: Support for password authentication was removed on August 13, 2021.“
 
 
-linux:
+### linux:
 
     ssh-keygen -t rsa
     
     cat ~/.ssh/id_rsa.pub   
 
-windows    
+### windows    
 
     ssh-keygen -t rsa -b 4096 -C "email"
     
@@ -48,7 +45,7 @@ after that use ssh to clone the repo!
 
 
 
-some usefull opensource :
+## some usefull opensource :
 
   https://github.com/zhllxt/asio2
   
