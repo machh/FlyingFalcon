@@ -48,3 +48,12 @@ after that use ssh to clone the repo!
 
 
 
+some usefull opensource :
+
+  https://github.com/zhllxt/asio2
+  https://github.com/youngwolf-project/ascs
+  https://github.com/sewenew/redis-plus-plus
+  https://github.com/qicosmos/rest_rpc
+  
+  https://github.com/zaphoyd/websocketpp
+  https://github.com/warmcat/libwebsockets
